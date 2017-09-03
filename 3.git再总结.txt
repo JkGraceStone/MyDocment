@@ -59,3 +59,5 @@ git push origin master
 git pull origin master即可。
 然后，再用git push origin master提交。
 
+====
+本地是可以创建分支的，也可以隐藏分支：
