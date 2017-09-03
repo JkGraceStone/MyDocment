@@ -1,0 +1,53 @@
+上面我们了解了先有本地库，后有远程库时候，如何关联远程库。
+一：.如果已经有了本地库也远程库。（用语句的话，只用这样做）
+case1向本地库添加了一个文件，如何同步到远程：
+git add .
+[git status]
+git commit [commit 的原因写一下]
+git remote add origin git@github.com:JKGraceStone/MyDocument.git [这个就设置了origin，下次能直接用]
+使用这个命令后，就可以把当前本地库的默认远程库相连接。
+从现在起，只要本地作了提交，就可以通过如下命令：把本地master分支的最新修改推送到github上的远程库了。
+git push origin master
+
+如果是第一次推送，那么要加上参数 -u
+
+2.下次有文件添加后的步骤
+[如果之前没有设置origin，那么就需要设置一下origin]
+git add .
+git commit
+git push origin master
+
+
+
+3.推送到远程库的所有操作就这这么几步。
+
+git remote add origin git@github.com:JKGraceStone/MyDocument.git[第一次设置默认远程库]
+
+git push -u origin master [第一次推送]
+
+git push origin master [以后所有推送，只用这一步就可以了。其他的是本地库的操作。非常的简单。]
+
+4.本地添加文件的操作：（提交修改和提交新加文件是一样的）
+
+git add .  或者加上文件名 git add redeme.txt
+git commit  或者一步到位（直接用 -m 输入提交原因） git commit -m  'readme.txt文件提交'
+[在接下來的vim输入本地提交的原因就可以了。]
+
+所以说，重中之重，是对本地操作熟练才是王道。
+
+5.文件修改后操作
+可以查看文件有什么不同
+git diff readme.txt
+
+其他操作和提交新增文件是一样的
+
+git add readme
+git commit -m 'modify file readme.txt'
+
+git push origin master
+如果我们使用git gui的话，可以直接用图形化界面来操作的.
+
+还可以使用管道来批量操作，也是可以的git add .|git commit -m 'modify git*.txt 2th'| git push origin master
+
+可以直接在git界面使用vim操作来修改文件。
+
