@@ -51,3 +51,11 @@ git push origin master
 
 可以直接在git界面使用vim操作来修改文件。
 
+
+=====
+两台电脑协作的方式：
+1如果是自己的两台电脑之间的，比如台式机和笔记本。这个时候，是安装好git后，把其中一台电脑上的密钥复制到另外一台机器上就可以了。
+提交之间，先pull命令
+git pull origin master即可。
+然后，再用git push origin master提交。
+
