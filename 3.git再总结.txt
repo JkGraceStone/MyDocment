@@ -57,4 +57,11 @@ git push origin master
 1如果是自己的两台电脑之间的，比如台式机和笔记本。这个时候，是安装好git后，把其中一台电脑上的密钥复制到另外一台机器上就可以了。
 提交之间，先pull命令
 git pull origin master即可。
+<<<<<<< HEAD
 然后，再用git push origin master提交。
+=======
+然后，再用git push origin master提交。
+
+====
+本地是可以创建分支的，也可以隐藏分支：
+
